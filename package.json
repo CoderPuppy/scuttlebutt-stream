@@ -1,0 +1,12 @@
+{
+	"name": "scuttlebutt-stream",
+	"version": "0.1.0",
+	"description": "An easier way to work with Scuttlebutt streams",
+	"author": "Drew Young",
+	"repository": { "type": "git", "url": "http://github.com/drewyoung1/scuttlebutt-stream.git" },
+	"main": "./index",
+	"dependencies": {
+		"through": "~2.1.0",
+		"stream-serializer": "~0.0.3"
+	}
+}
