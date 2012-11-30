@@ -1,6 +1,7 @@
 {
 	"name": "scuttlebutt-stream",
 	"version": "0.1.0",
+	"keywords": [ "stream", "streams", "user-streams", "pipe" ],
 	"description": "An easier way to work with Scuttlebutt streams",
 	"author": "Drew Young",
 	"repository": { "type": "git", "url": "http://github.com/drewyoung1/scuttlebutt-stream.git" },
