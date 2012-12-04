@@ -1,6 +1,6 @@
 {
 	"name": "scuttlebutt-stream",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"keywords": [ "stream", "streams", "user-streams", "pipe" ],
 	"description": "An easier way to work with Scuttlebutt streams",
 	"author": "Drew Young",
