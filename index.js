@@ -1,23 +1,18 @@
-var through    = require('through');
-var serializer = require('stream-serializer');
+var through = require('through');
 
 function scuttlebutt(write, end) {
 	var input;
 	var ts = through(function(data) {
 		if(Array.isArray(data)) {
 			input = data;
-			write.apply(outer, data.concat([ data ]));
+			write.apply(ts, data.concat([ data ]));
 			input = undefined;
 		}
 	}, end);
 
 	var tsQueue = ts.queue;
 
-	var outer = serializer.json(ts);
-	ts.outer = outer;
-	outer.inner = ts;
-
-	outer.queue = function queue(data, update) {
+	ts.queue = function queue(data, update) {
 		if(!update)
 			update = input;
 
@@ -27,7 +22,7 @@ function scuttlebutt(write, end) {
 		return this;
 	};
 
-	return outer;
+	return ts;
 }
 
 exports = module.exports = scuttlebutt;
